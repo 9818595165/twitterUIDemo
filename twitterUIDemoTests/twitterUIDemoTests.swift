@@ -18,6 +18,11 @@ final class twitterUIDemoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testTweet(){
+        let viewModel = TweetRowViewModel(tweet: Tweet(caption: "", likes: 12))
+        XCTAssertNotNil(viewModel.tweet.caption)
+    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
