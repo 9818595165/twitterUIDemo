@@ -7,7 +7,7 @@ target 'twitterUIDemo' do
 
   # Pods for twitterUIDemo
 	pod 'SwiftLint'
-        pod 'Kingfisher'
+  pod 'Kingfisher'
 
   target 'twitterUIDemoTests' do
     inherit! :search_paths
