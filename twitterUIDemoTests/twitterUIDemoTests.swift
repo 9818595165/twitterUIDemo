@@ -8,7 +8,7 @@
 import XCTest
 @testable import twitterUIDemo
 
-final class twitterUIDemoTests: XCTestCase {
+final class TwitterUIDemoTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,12 +18,31 @@ final class twitterUIDemoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testTweet(){
+    func testTweetNotEqual(){
+        let viewModel = TweetRowViewModel(tweet: Tweet(caption: "test", likes: 12))
+        XCTAssertNotEqual(viewModel.tweet.caption, "")
+    }
+    
+    func testTweetEqual(){
         let viewModel = TweetRowViewModel(tweet: Tweet(caption: "", likes: 12))
-        XCTAssertNotNil(viewModel.tweet.caption)
+        XCTAssertEqual(viewModel.tweet.caption, "")
+    }
+    
+    func testProfileEqual(){
+        let viewModel = ProfileViewModel(user: User(username: "", fullname: "", profileImageUrl: ""))
+        XCTAssertEqual(viewModel.user.username, "")
+        XCTAssertEqual(viewModel.user.fullname, "")
+        XCTAssertEqual(viewModel.user.profileImageUrl, "")
+    }
+    func testProfileNotEqual(){
+        let viewModel = ProfileViewModel(user: User(username: "test", fullname: "test", profileImageUrl: "test"))
+        XCTAssertNotEqual(viewModel.user.username, "")
+        XCTAssertNotEqual(viewModel.user.fullname, "")
+        XCTAssertNotEqual(viewModel.user.profileImageUrl, "")
     }
     
     func testExample() throws {
+        XCTAssertTrue(true)
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         // Any test you write for XCTest can be annotated as throws and async.

@@ -6,9 +6,9 @@ target 'twitterUIDemo' do
   use_frameworks!
 
   # Pods for twitterUIDemo
-	pod 'SwiftLint'
+  pod 'SwiftLint'
   pod 'Kingfisher'
-
+  
   target 'twitterUIDemoTests' do
     inherit! :search_paths
     # Pods for testing
