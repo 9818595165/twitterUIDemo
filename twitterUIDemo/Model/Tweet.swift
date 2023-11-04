@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Tweet: Identifiable, Decodable {
     var id: String = UUID().uuidString
     let caption: String

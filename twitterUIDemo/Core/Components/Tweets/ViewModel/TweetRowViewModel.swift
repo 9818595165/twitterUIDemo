@@ -9,7 +9,6 @@ import Foundation
 
 class TweetRowViewModel: ObservableObject {
     @Published var tweet: Tweet
-    
     init(tweet: Tweet) {
         self.tweet = tweet
     }

@@ -18,29 +18,26 @@ final class TwitterUIDemoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testTweetNotEqual(){
+    func testTweetNotEqual() {
         let viewModel = TweetRowViewModel(tweet: Tweet(caption: "test", likes: 12))
         XCTAssertNotEqual(viewModel.tweet.caption, "")
     }
-    
-    func testTweetEqual(){
+    func testTweetEqual() {
         let viewModel = TweetRowViewModel(tweet: Tweet(caption: "", likes: 12))
         XCTAssertEqual(viewModel.tweet.caption, "")
     }
-    
-    func testProfileEqual(){
+    func testProfileEqual() {
         let viewModel = ProfileViewModel(user: User(username: "", fullname: "", profileImageUrl: ""))
         XCTAssertEqual(viewModel.user.username, "")
         XCTAssertEqual(viewModel.user.fullname, "")
         XCTAssertEqual(viewModel.user.profileImageUrl, "")
     }
-    func testProfileNotEqual(){
+    func testProfileNotEqual() {
         let viewModel = ProfileViewModel(user: User(username: "test", fullname: "test", profileImageUrl: "test"))
         XCTAssertNotEqual(viewModel.user.username, "")
         XCTAssertNotEqual(viewModel.user.fullname, "")
         XCTAssertNotEqual(viewModel.user.profileImageUrl, "")
     }
-    
     func testExample() throws {
         XCTAssertTrue(true)
         // This is an example of a functional test case.

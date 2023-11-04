@@ -9,7 +9,6 @@ import Foundation
 
 struct User: Identifiable, Decodable {
     var id: String = UUID().uuidString
-    
     let username: String
     let fullname: String
     let profileImageUrl: String
